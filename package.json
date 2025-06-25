@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "tech-suggestion-app",
+=======
+  "name": "my-vite-app",
+>>>>>>> fa64778093536a2eafca3c5c5ee61b00abbf059a
   "private": true,
   "version": "0.0.0",
   "type": "module",

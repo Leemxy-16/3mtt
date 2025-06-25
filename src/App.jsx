@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 const techSuggestions = [
@@ -195,3 +196,16 @@ function App() {
 }
 
 export default App;
+=======
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+
+  return <h1>Hello World!</h1>;
+}
+
+export default App
+>>>>>>> fa64778093536a2eafca3c5c5ee61b00abbf059a
