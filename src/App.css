@@ -1,61 +1,167 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3 60%);
+/* App.css - for styling the Tech Skill Advisor in light mode */
+
+body {
+  background-color: #f9fafb;
+  color: #1a202c;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
 }
 
-.title {
-    font-size: 2.2rem;
-    margin-bottom: 24px;
-    font-weight: 600;
-    color: #374151;
+.main-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 2rem;
 }
 
-.counter-box {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    background: #fff;
-    padding: 32px 40px;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(60, 120, 180, 0.1);
+.advisor-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px 0 rgba(66,153,225,0.08), 0 1.5px 3px 0 rgba(0,0,0,0.04);
+  border: 1px solid #e5e7eb;
+  max-width: 48rem;
+  margin: 2rem auto 0 auto;
+  padding: 2rem;
 }
 
-.btn {
-    padding: 12px 28px;
-    border: none;
-    border-radius: 8px;
-    background-color: #2563eb;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
+.advisor-title {
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.btn:disabled {
-    background: #aaa;
-    cursor: not-allowed;
+.advisor-desc {
+  color: #374151;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
 }
 
-.count {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #2563eb;
-    min-width: 40px;
-    text-align: center;
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  resize: none;
 }
 
-.limit-message {
-    margin-top: 24px;
-    padding: 10px 22px;
-    border-radius: 6px;
-    background: #ffe4e6;
-    color: #dc2626;
-    font-weight: 600;
-    font-size: 1.1rem;
-    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.05);
+.example-list {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.example-list ul {
+  margin-left: 1.5rem;
+}
+
+.example-list li {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.example-list li:hover {
+  color: #2563eb;
+}
+
+.error-message {
+  color: #dc2626;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.suggestion-box {
+  background: #fff;
+  border: 2px solid #bfdbfe;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px 0 rgba(66,153,225,0.08), 0 1.5px 3px 0 rgba(0,0,0,0.04);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.suggestion-header {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.suggestion-skill {
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #1e3a8a;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+.suggestion-time {
+  color: #16a34a;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.suggestion-note {
+  color: #374151;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.try-again-btn {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  padding: 0.5rem 1.5rem;
+  background: #374151;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.try-again-btn:hover {
+  background: #111827;
+}
+
+.get-suggestion-btn {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem;
+  font-size: 1.12rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.get-suggestion-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(16px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s;
 }
