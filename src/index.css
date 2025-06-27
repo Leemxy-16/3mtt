@@ -1,34 +1,40 @@
-/* index.css - Global resets for Light Mode with readability and user-friendly focus */
-
-html,
-body,
-#root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: #f9fafb;
-    color: #1a202c;
-    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-    box-sizing: border-box;
-    letter-spacing: 0.01em;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    background: #f3f4f6;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #e5e7eb;
-    border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #d1d5db;
-}
+    /* index.css - Global resets for Light Mode with readability and user-friendly focus */
+    
+    html,
+    body,
+    #root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #f9fafb;
+        color: #1a202c;
+        font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+        box-sizing: border-box;
+        letter-spacing: 0.01em;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 10px;
+        background: #f3f4f6;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #e5e7eb;
+        border-radius: 8px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #d1d5db;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f8fafc;
+        }
+    }
