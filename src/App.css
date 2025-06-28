@@ -1,302 +1,243 @@
-/* App.css - Enhanced User-Friendly Light Mode Styles */
-
-body {
-    background-color: #f9fafb;
-    color: #1a202c;
-    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    letter-spacing: 0.01em;
-    line-height: 1.7;
-}
-
-.main-container {
-    min-height: 100vh;
-    background: #f9fafb;
-    padding: 2rem;
-}
-
-.advisor-card {
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 6px 24px 0 rgba(66, 153, 225, 0.10), 0 1.5px 3px 0 rgba(0, 0, 0, 0.06);
-    border: 1px solid #e5e7eb;
-    max-width: 48rem;
-    margin: 2rem auto 0 auto;
-    padding: 2.5rem 2rem 2rem 2rem;
-    transition: box-shadow 0.2s;
-}
-
-.advisor-card:hover {
-    box-shadow: 0 12px 36px 0 rgba(66, 153, 225, 0.18), 0 1.5px 8px 0 rgba(0, 0, 0, 0.08);
-}
-
-.advisor-title {
-    color: #1d4ed8;
-    font-weight: 900;
-    font-size: 2.7rem;
-    text-align: center;
-    margin-bottom: 1.1rem;
-    letter-spacing: 0.02em;
-    text-shadow: 0 1px 0 rgba(29, 78, 216, 0.06);
-}
-
-.advisor-desc {
-    color: #374151;
-    text-align: center;
-    margin-bottom: 1.7rem;
-    font-size: 1.16rem;
-    font-weight: 500;
-}
-
-.textarea {
-    width: 100%;
-    padding: 1.1rem;
-    background: #f3f4f6;
-    border: 1.6px solid #cbd5e1;
-    border-radius: 0.6rem;
-    color: #1a202c;
-    margin-bottom: 1.1rem;
-    font-size: 1.08rem;
-    resize: none;
-    line-height: 1.7;
-    font-family: inherit;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 2px #2563eb22;
-}
-
-.example-list {
-    color: #6b7280;
-    font-size: 1.01rem;
-    margin-bottom: 1.3rem;
-}
-
-.example-list ul {
-    margin-left: 1.6rem;
-    padding-left: 0.2rem;
-}
-
-.example-list li {
-    cursor: pointer;
-    transition: color 0.15s, background 0.15s;
-    padding: 0.13rem 0.4rem;
-    border-radius: 0.3rem;
-    font-size: 1.01rem;
-}
-
-.example-list li:hover {
-    color: #2563eb;
-    background: #eff6ff;
-}
-
-.error-message {
-    color: #dc2626;
-    text-align: center;
-    margin-bottom: 1.3rem;
-    font-weight: 600;
-    font-size: 1.08rem;
-}
-
-.suggestion-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2.5rem;
-}
-
-.suggestion-box {
-    background: #fff;
-    border: 2.2px solid #bfdbfe;
-    border-radius: 1.1rem;
-    box-shadow: 0 6px 24px 0 rgba(66, 153, 225, 0.11), 0 1.5px 3px 0 rgba(0, 0, 0, 0.04);
-    padding: 1.8rem 1.3rem 1.3rem 1.3rem;
-    margin-bottom: 1.5rem;
-    transition: box-shadow 0.2s, border-color 0.2s;
-    font-size: 1.07rem;
-    line-height: 1.65;
-    max-width: 360px;
-    min-width: 260px;
-    flex: 1 1 320px;
-}
-
-.suggestion-box:hover {
-    border-color: #2563eb;
-    box-shadow: 0 8px 32px 0 rgba(66, 153, 225, 0.18);
-}
-
-.suggestion-header {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #2563eb;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.7rem;
-    letter-spacing: 0.01em;
-}
-
-.suggestion-skill {
-    background: #eff6ff;
-    border: 1.2px solid #dbeafe;
-    border-radius: 0.6rem;
-    padding: 0.65rem 1.15rem;
-    color: #1e3a8a;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 0.7rem;
-    font-size: 1.08rem;
-    letter-spacing: 0.01em;
-}
-
-.suggestion-time {
-    color: #16a34a;
-    font-weight: 700;
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.07rem;
-}
-
-.suggestion-note {
-    color: #374151;
-    font-style: italic;
-    margin-top: 0.7rem;
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
-
-.try-again-btn {
-    display: block;
-    margin: 2rem auto 0 auto;
-    padding: 0.6rem 2.2rem;
-    background: #374151;
-    color: #fff;
-    border: none;
-    border-radius: 9999px;
-    font-size: 1.07rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.17s;
-    letter-spacing: 0.01em;
-    box-shadow: 0 1px 8px 0 #cbd5e150;
-}
-
-.try-again-btn:hover {
-    background: #111827;
-}
-
-.get-suggestion-btn {
-    width: 100%;
-    background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
-    color: #fff;
-    font-weight: 800;
-    padding: 0.85rem;
-    font-size: 1.13rem;
-    border-radius: 0.6rem;
-    border: none;
-    margin-top: 0.7rem;
-    cursor: pointer;
-    transition: background 0.17s;
-    letter-spacing: 0.01em;
-    box-shadow: 0 1px 10px 0 #c7dffe55;
-}
-
-.get-suggestion-btn:hover {
-    background: linear-gradient(90deg, #1d4ed8 60%, #2563eb 100%);
-}
-
-
-/* Fade-in animation */
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(16px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in {
-    animation: fadeIn 0.8s;
-}
-
-
-/* Responsive */
-
-@media (max-width: 600px) {
-    .advisor-card {
-        padding: 1rem 0.5rem 1.5rem 0.5rem;
-    }
-    .suggestion-container {
-        gap: 1rem;
-    }
-    .suggestion-box {
-        padding: 1.1rem 0.7rem 1rem 0.7rem;
-        min-width: unset;
-        max-width: unset;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background: linear-gradient(135deg, #e0eafc, #cfdef3 60%);
-    }
-    .title {
-        font-size: 2.2rem;
-        margin-bottom: 24px;
-        font-weight: 600;
-        color: #374151;
-    }
-    .counter-box {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        background: #fff;
-        padding: 32px 40px;
-        border-radius: 18px;
-        box-shadow: 0 4px 24px rgba(60, 120, 180, 0.1);
-    }
-    .btn {
-        padding: 12px 28px;
-        border: none;
-        border-radius: 8px;
-        background-color: #2563eb;
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
-    .btn:disabled {
-        background: #aaa;
-        cursor: not-allowed;
-    }
-    .count {
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #2563eb;
-        min-width: 40px;
-        text-align: center;
-    }
-    .limit-message {
-        margin-top: 24px;
-        padding: 10px 22px;
-        border-radius: 6px;
-        background: #ffe4e6;
-        color: #dc2626;
-        font-weight: 600;
-        font-size: 1.1rem;
-        box-shadow: 0 2px 8px rgba(255, 71, 87, 0.05);
-    }
-}
+            /* App.css - Enhanced User-Friendly Light Mode Styles */
+            
+            body {
+                background-color: #f9fafb;
+                color: #1a202c;
+                font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+                margin: 0;
+                letter-spacing: 0.01em;
+                line-height: 1.7;
+            }
+            
+            .main-container {
+                min-height: 100vh;
+                background: #f9fafb;
+                padding: 2rem;
+            }
+            
+            .advisor-card {
+                background: #fff;
+                border-radius: 1rem;
+                box-shadow: 0 6px 24px 0 rgba(66, 153, 225, 0.10), 0 1.5px 3px 0 rgba(0, 0, 0, 0.06);
+                border: 1px solid #e5e7eb;
+                max-width: 48rem;
+                margin: 2rem auto 0 auto;
+                padding: 2.5rem 2rem 2rem 2rem;
+                transition: box-shadow 0.2s;
+            }
+            
+            .advisor-card:hover {
+                box-shadow: 0 12px 36px 0 rgba(66, 153, 225, 0.18), 0 1.5px 8px 0 rgba(0, 0, 0, 0.08);
+            }
+            
+            .advisor-title {
+                color: #1d4ed8;
+                font-weight: 900;
+                font-size: 2.7rem;
+                text-align: center;
+                margin-bottom: 1.1rem;
+                letter-spacing: 0.02em;
+                text-shadow: 0 1px 0 rgba(29, 78, 216, 0.06);
+            }
+            
+            .advisor-desc {
+                color: #374151;
+                text-align: center;
+                margin-bottom: 1.7rem;
+                font-size: 1.16rem;
+                font-weight: 500;
+            }
+            
+            .textarea {
+                width: 100%;
+                padding: 1.1rem;
+                background: #f3f4f6;
+                border: 1.6px solid #cbd5e1;
+                border-radius: 0.6rem;
+                color: #1a202c;
+                margin-bottom: 1.1rem;
+                font-size: 1.08rem;
+                resize: none;
+                line-height: 1.7;
+                font-family: inherit;
+                transition: border-color 0.2s, box-shadow 0.2s;
+            }
+            
+            .textarea:focus {
+                outline: none;
+                border-color: #2563eb;
+                box-shadow: 0 0 0 2px #2563eb22;
+            }
+            
+            .example-list {
+                color: #6b7280;
+                font-size: 1.01rem;
+                margin-bottom: 1.3rem;
+            }
+            
+            .example-list ul {
+                margin-left: 1.6rem;
+                padding-left: 0.2rem;
+            }
+            
+            .example-list li {
+                cursor: pointer;
+                transition: color 0.15s, background 0.15s;
+                padding: 0.13rem 0.4rem;
+                border-radius: 0.3rem;
+                font-size: 1.01rem;
+            }
+            
+            .example-list li:hover {
+                color: #2563eb;
+                background: #eff6ff;
+            }
+            
+            .error-message {
+                color: #dc2626;
+                text-align: center;
+                margin-bottom: 1.3rem;
+                font-weight: 600;
+                font-size: 1.08rem;
+            }
+            
+            .suggestion-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                justify-content: center;
+                margin-top: 2.5rem;
+            }
+            
+            .suggestion-box {
+                background: #fff;
+                border: 2.2px solid #bfdbfe;
+                border-radius: 1.1rem;
+                box-shadow: 0 6px 24px 0 rgba(66, 153, 225, 0.11), 0 1.5px 3px 0 rgba(0, 0, 0, 0.04);
+                padding: 1.8rem 1.3rem 1.3rem 1.3rem;
+                margin-bottom: 1.5rem;
+                transition: box-shadow 0.2s, border-color 0.2s;
+                font-size: 1.07rem;
+                line-height: 1.65;
+                max-width: 360px;
+                min-width: 260px;
+                flex: 1 1 320px;
+            }
+            
+            .suggestion-box:hover {
+                border-color: #2563eb;
+                box-shadow: 0 8px 32px 0 rgba(66, 153, 225, 0.18);
+            }
+            
+            .suggestion-header {
+                font-size: 1.4rem;
+                font-weight: 800;
+                color: #2563eb;
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                margin-bottom: 0.7rem;
+                letter-spacing: 0.01em;
+            }
+            
+            .suggestion-skill {
+                background: #eff6ff;
+                border: 1.2px solid #dbeafe;
+                border-radius: 0.6rem;
+                padding: 0.65rem 1.15rem;
+                color: #1e3a8a;
+                font-weight: 700;
+                display: inline-block;
+                margin-bottom: 0.7rem;
+                font-size: 1.08rem;
+                letter-spacing: 0.01em;
+            }
+            
+            .suggestion-time {
+                color: #16a34a;
+                font-weight: 700;
+                margin-bottom: 0.6rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 1.07rem;
+            }
+            
+            .suggestion-note {
+                color: #374151;
+                font-style: italic;
+                margin-top: 0.7rem;
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+            
+            .try-again-btn {
+                display: block;
+                margin: 2rem auto 0 auto;
+                padding: 0.6rem 2.2rem;
+                background: #374151;
+                color: #fff;
+                border: none;
+                border-radius: 9999px;
+                font-size: 1.07rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.17s;
+                letter-spacing: 0.01em;
+                box-shadow: 0 1px 8px 0 #cbd5e150;
+            }
+            
+            .try-again-btn:hover {
+                background: #111827;
+            }
+            
+            .get-suggestion-btn {
+                width: 100%;
+                background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+                color: #fff;
+                font-weight: 800;
+                padding: 0.85rem;
+                font-size: 1.13rem;
+                border-radius: 0.6rem;
+                border: none;
+                margin-top: 0.7rem;
+                cursor: pointer;
+                transition: background 0.17s;
+                letter-spacing: 0.01em;
+                box-shadow: 0 1px 10px 0 #c7dffe55;
+            }
+            
+            .get-suggestion-btn:hover {
+                background: linear-gradient(90deg, #1d4ed8 60%, #2563eb 100%);
+            }
+            /* Fade-in animation */
+            
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(16px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .animate-fade-in {
+                animation: fadeIn 0.8s;
+            }
+            /* Responsive */
+            
+            @media (max-width: 600px) {
+                .advisor-card {
+                    padding: 1rem 0.5rem 1.5rem 0.5rem;
+                }
+                .suggestion-container {
+                    gap: 1rem;
+                }
+                .suggestion-box {
+                    padding: 1.1rem 0.7rem 1rem 0.7rem;
+                    min-width: unset;
+                    max-width: unset;
+                }
+            }
